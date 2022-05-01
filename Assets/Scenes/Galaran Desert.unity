@@ -1289,7 +1289,7 @@ PrefabInstance:
       objectReference: {fileID: 1134704566}
     - target: {fileID: 6728253919372759647, guid: b3dbfce23cb71da4bb86e8f05c0265c0, type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 6728253919372759647, guid: b3dbfce23cb71da4bb86e8f05c0265c0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1526,11 +1526,6 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 27bfdb9a40efac94b969eaf77cea92d9, type: 3}
   m_PrefabInstance: {fileID: 343583600}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &411273590 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6728253920197091853, guid: b3dbfce23cb71da4bb86e8f05c0265c0, type: 3}
-  m_PrefabInstance: {fileID: 288670347}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &434633307
 PrefabInstance:
@@ -2013,24 +2008,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6728253920197091890, guid: b3dbfce23cb71da4bb86e8f05c0265c0, type: 3}
   m_PrefabInstance: {fileID: 288670347}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &569481762
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 569481761}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 71f852da61bc03441889c5e08d17cddd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerMovimentation: {fileID: 1965714549}
-  handCheck: {fileID: 411273590}
-  graspable:
-    serializedVersion: 2
-    m_Bits: 64
-  action: {fileID: 1175444407}
 --- !u!136 &569481763
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2072,7 +2049,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -2265,7 +2242,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8536935495456479218, guid: e075911be185c6f4bb9a16ad731a05a6, type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 8536935495456479218, guid: e075911be185c6f4bb9a16ad731a05a6, type: 3}
       propertyPath: m_AnchorMax.x
@@ -3264,7 +3241,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 09edea94305a15149b2ac23692282140, type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 09edea94305a15149b2ac23692282140, type: 3}
       propertyPath: m_LocalScale.x

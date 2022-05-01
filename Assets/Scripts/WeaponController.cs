@@ -11,12 +11,13 @@ public class WeaponController : MonoBehaviour
     public AudioClip SwordAttackSound01;
     public AudioClip SwordSheatheSound;
     public bool IsAttacking = false;
-    public bool Sheathe = false;
+    public bool Sacking = false;
+    public bool Sheathe = true;
 
     private void Update()
     {
         
-        if (Input.GetMouseButtonDown(0) && Sheathe)
+        if (Input.GetMouseButtonDown(0) && Sacking)
         {
             if (CanAttack)
             {
@@ -30,21 +31,23 @@ public class WeaponController : MonoBehaviour
 
     public void SwordSheathe()
         {
-        if (Input.GetKeyDown(KeyCode.F) && Sheathe == false)
+        if (Input.GetKeyDown(KeyCode.F) && Sacking == false)
         {
             CanAttack = true;
-            Sheathe = true;
+            Sacking = true;
+            Sheathe = false;
 
             Animator anim = Sword.GetComponent<Animator>();
-            anim.SetTrigger("sheathe");
+            anim.SetTrigger("Sacking");
 
             AudioSource ac = GetComponent<AudioSource>();
             ac.PlayOneShot(SwordSheatheSound);
         }
-        else if (Input.GetKeyDown(KeyCode.F) && Sheathe == true)
+        else if (Input.GetKeyDown(KeyCode.F) && Sacking == true)
         {
            CanAttack = false;
-           Sheathe = false;
+           Sacking = false;
+           Sheathe = true;
 
            AudioSource ac = GetComponent<AudioSource>();
            ac.PlayOneShot(SwordSheatheSound);

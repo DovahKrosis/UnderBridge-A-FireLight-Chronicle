@@ -10,31 +10,25 @@ public class TakeItens : MonoBehaviour
     public Transform hand1; //pivot da mão do personagem direita
 
 
-    public void OnCollisionEnter(Collision col)
+    //TODO: lógica para a pegar apenas um item 
+    //TODO: lógica para itens de duas mãos em caso de armas
+    //TODO: incrementar inventário
+
+    public void OnCollisionStay(Collision col)
     {
         action.GetComponent<Text>().text = "";
 
-        while(col.gameObject.tag == "isColetavel")
+        if(col.gameObject.tag == "isColetavel" && Input.GetKey(KeyCode.E))
         {
             action.GetComponent<Text>().text = "press E";
-            if (Input.GetKeyDown(KeyCode.E))
-            {
+
                 col.gameObject.GetComponent<Rigidbody>().isKinematic = true;
                 col.transform.position = hand1.position;
                 col.transform.rotation = hand1.rotation;
 
                 col.transform.SetParent(hand1);
                 action.GetComponent<Text>().text = "";
-            }
         }
-        //if (col.gameObject.tag == "isColetavel")
-        //{
-        //}
-        //else
-        //{
-        //    action.GetComponent<Text>().text = "";
-        //}
-
     }
 }
 
